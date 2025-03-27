@@ -2,7 +2,7 @@ services:
   - type: web
     name: agenda-api
     env: dotnet
-    region: oregon # ou outra região disponível
+    region: oregon # ou sua região preferida
     buildCommand: dotnet publish Agenda.API/Agenda.API.csproj -c Release -o ./publish
     startCommand: dotnet ./publish/Agenda.API.dll
     plan: free
