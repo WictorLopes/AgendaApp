@@ -27,8 +27,6 @@ Este projeto consiste em um sistema de CRUD (Create, Read, Update, Delete) para 
 ```bash
 Abra o terminal na pasta do backend e execute os seguintes comandos:
 
-cd backend
-
 # Restaurar pacotes
 dotnet restore
 

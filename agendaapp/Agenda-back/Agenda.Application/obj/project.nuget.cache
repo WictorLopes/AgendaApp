@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Mg0m4LL21/M=",
+  "dgSpecHash": "wNMk874Oy4w=",
   "success": true,
-  "projectFilePath": "C:\\Users\\wicto\\OneDrive\\Documents\\AgendaApp\\Agenda Back\\Agenda.Application\\Agenda.Application.csproj",
+  "projectFilePath": "C:\\Users\\wicto\\OneDrive\\Documents\\AgendaApp\\agendaapp\\Agenda-back\\Agenda.Application\\Agenda.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\wicto\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\wicto\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",

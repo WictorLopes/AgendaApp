@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YsDy6POpePg=",
+  "dgSpecHash": "ylL9hQ49nG0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\wicto\\OneDrive\\Documents\\AgendaApp\\Agenda Back\\Agenda.API\\Agenda.API.csproj",
+  "projectFilePath": "C:\\Users\\wicto\\OneDrive\\Documents\\AgendaApp\\agendaapp\\Agenda-back\\Agenda.API\\Agenda.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\wicto\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\wicto\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

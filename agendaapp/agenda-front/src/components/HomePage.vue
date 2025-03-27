@@ -2,7 +2,7 @@
   <div class="container">
     <h1 class="greeting">{{ saudacao }}</h1>
     <p class="user-info">
-      Meu nome é:
+      Usuário: 
       <span>{{ userName }}</span>
     </p>
 
@@ -49,18 +49,6 @@
             />
           </div>
           <div class="form-group">
-            <label for="telefone">Telefone:</label>
-            <InputText
-              v-model="newContato.telefone"
-              id="telefone"
-              v-mask="'(##) #####-####'"
-              placeholder="(99) 99999-9999"
-              required
-              inputmode="numeric"
-              class="p-inputtext-lg"
-            />
-          </div>
-          <div class="form-group">
             <label for="tipoTelefone">Tipo de Telefone:</label>
             <Dropdown
               v-model="newContato.tipoTelefone"
@@ -74,6 +62,36 @@
               @change="onTipoChange"
             />
           </div>
+          <div class="form-group">
+            <label for="telefone">Telefone:</label>
+            <InputText
+              v-if="newContato.tipoTelefone === 'Celular'"
+              v-model="newContato.telefone"
+              id="telefone"
+              v-mask="'(##) #####-####'"
+              placeholder="(99) 99999-9999"
+              required
+              inputmode="numeric"
+              class="p-inputtext-lg"
+            />
+            <InputText
+              v-else-if="newContato.tipoTelefone === 'Fixo'"
+              v-model="newContato.telefone"
+              id="telefone"
+              v-mask="'(##) ####-####'"
+              placeholder="(99) 9999-9999"
+              required
+              inputmode="numeric"
+              class="p-inputtext-lg"
+            />
+            <InputText
+              v-else
+              disabled
+              placeholder="Selecione o tipo de telefone"
+              class="p-inputtext-lg"
+            />
+          </div>
+
           <Button
             label="Adicionar"
             type="submit"
@@ -81,6 +99,7 @@
             :loading="submitting"
           />
         </form>
+        <span v-if="formError" class="form-error">{{ formError }}</span>
       </template>
     </Card>
   </div>
@@ -107,7 +126,7 @@ export default {
   data() {
     return {
       saudacao: this.getGreeting(),
-      userName: 'Preciosa',
+      userName: 'Wictor',
       contatos: [],
       newContato: {
         nome: '',
@@ -121,6 +140,7 @@ export default {
       ],
       loading: false,
       submitting: false,
+      formError: '',
     }
   },
   mounted() {
@@ -154,20 +174,21 @@ export default {
           )
         })
       } catch (error) {
-        console.error('Erro ao buscar contatos:', error)
         alert('Erro ao carregar os contatos. Tente novamente.')
       } finally {
         this.loading = false
       }
     },
     async addContato() {
+      this.formError = ''
+
       if (
         !this.newContato.nome ||
         !this.newContato.email ||
         !this.newContato.telefone ||
         !this.newContato.tipoTelefone
       ) {
-        alert('Por favor, preencha todos os campos.')
+        this.formError = 'Por favor, preencha todos os campos.'
         return
       }
 
@@ -180,11 +201,13 @@ export default {
           tipoTelefone: this.newContato.tipoTelefone,
         }
         await axios.post('http://localhost:5053/api/contato', contato)
+
         contato.telefone = this.formatarTelefone(
           contato.telefone,
           contato.tipoTelefone,
         )
         this.contatos.push(contato)
+
         this.newContato = {
           nome: '',
           email: '',
@@ -192,8 +215,7 @@ export default {
           tipoTelefone: '',
         }
       } catch (error) {
-        console.error('Erro ao adicionar contato:', error)
-        alert('Erro ao adicionar o contato. Tente novamente.')
+        this.formError = 'Erro ao adicionar o contato. Tente novamente.'
       } finally {
         this.submitting = false
       }
@@ -298,5 +320,11 @@ export default {
 
 :deep(.p-datatable .p-datatable-tbody > tr:hover) {
   background-color: #f9f9f9;
+}
+.form-error {
+  color: #d32f2f;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: -10px;
 }
 </style>

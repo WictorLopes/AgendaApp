@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ir0hM2MYN0k=",
+  "dgSpecHash": "qBi1mUKN5SE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\wicto\\OneDrive\\Documents\\AgendaApp\\Agenda Back\\Agenda.Infrastructure\\Agenda.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\wicto\\OneDrive\\Documents\\AgendaApp\\agendaapp\\Agenda-back\\Agenda.Infrastructure\\Agenda.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\wicto\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\wicto\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

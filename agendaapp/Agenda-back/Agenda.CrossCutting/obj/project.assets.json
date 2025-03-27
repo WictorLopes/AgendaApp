@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wicto\\OneDrive\\Documents\\AgendaApp\\Agenda Back\\Agenda.CrossCutting\\Agenda.CrossCutting.csproj",
+      "projectUniqueName": "C:\\Users\\wicto\\OneDrive\\Documents\\AgendaApp\\agendaapp\\Agenda-back\\Agenda.CrossCutting\\Agenda.CrossCutting.csproj",
       "projectName": "Agenda.CrossCutting",
-      "projectPath": "C:\\Users\\wicto\\OneDrive\\Documents\\AgendaApp\\Agenda Back\\Agenda.CrossCutting\\Agenda.CrossCutting.csproj",
+      "projectPath": "C:\\Users\\wicto\\OneDrive\\Documents\\AgendaApp\\agendaapp\\Agenda-back\\Agenda.CrossCutting\\Agenda.CrossCutting.csproj",
       "packagesPath": "C:\\Users\\wicto\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wicto\\OneDrive\\Documents\\AgendaApp\\Agenda Back\\Agenda.CrossCutting\\obj\\",
+      "outputPath": "C:\\Users\\wicto\\OneDrive\\Documents\\AgendaApp\\agendaapp\\Agenda-back\\Agenda.CrossCutting\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\wicto\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -51,8 +51,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\wicto\\OneDrive\\Documents\\AgendaApp\\Agenda Back\\Agenda.Domain\\Agenda.Domain.csproj": {
-              "projectPath": "C:\\Users\\wicto\\OneDrive\\Documents\\AgendaApp\\Agenda Back\\Agenda.Domain\\Agenda.Domain.csproj"
+            "C:\\Users\\wicto\\OneDrive\\Documents\\AgendaApp\\agendaapp\\Agenda-back\\Agenda.Domain\\Agenda.Domain.csproj": {
+              "projectPath": "C:\\Users\\wicto\\OneDrive\\Documents\\AgendaApp\\agendaapp\\Agenda-back\\Agenda.Domain\\Agenda.Domain.csproj"
             }
           }
         }

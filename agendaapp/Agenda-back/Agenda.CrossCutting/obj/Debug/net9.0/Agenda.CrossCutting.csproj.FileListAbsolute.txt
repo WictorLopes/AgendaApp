@@ -28,3 +28,19 @@ C:\Users\wicto\OneDrive\Documents\AgendaApp\Agenda Back\Agenda.CrossCutting\obj\
 C:\Users\wicto\OneDrive\Documents\AgendaApp\Agenda Back\Agenda.CrossCutting\obj\Debug\net9.0\refint\Agenda.CrossCutting.dll
 C:\Users\wicto\OneDrive\Documents\AgendaApp\Agenda Back\Agenda.CrossCutting\obj\Debug\net9.0\Agenda.CrossCutting.pdb
 C:\Users\wicto\OneDrive\Documents\AgendaApp\Agenda Back\Agenda.CrossCutting\obj\Debug\net9.0\ref\Agenda.CrossCutting.dll
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.CrossCutting\bin\Debug\net9.0\Agenda.CrossCutting.deps.json
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.CrossCutting\bin\Debug\net9.0\Agenda.CrossCutting.dll
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.CrossCutting\bin\Debug\net9.0\Agenda.CrossCutting.pdb
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.CrossCutting\bin\Debug\net9.0\Agenda.Domain.dll
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.CrossCutting\bin\Debug\net9.0\Agenda.Domain.pdb
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.CrossCutting\obj\Debug\net9.0\Agenda.CrossCutting.csproj.AssemblyReference.cache
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.CrossCutting\obj\Debug\net9.0\Agenda.CrossCutting.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.CrossCutting\obj\Debug\net9.0\Agenda.CrossCutting.AssemblyInfoInputs.cache
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.CrossCutting\obj\Debug\net9.0\Agenda.CrossCutting.AssemblyInfo.cs
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.CrossCutting\obj\Debug\net9.0\Agenda.CrossCutting.csproj.CoreCompileInputs.cache
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.CrossCutting\obj\Debug\net9.0\Agenda.CrossCutting.sourcelink.json
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.CrossCutting\obj\Debug\net9.0\Agenda.C.A40D4D67.Up2Date
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.CrossCutting\obj\Debug\net9.0\Agenda.CrossCutting.dll
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.CrossCutting\obj\Debug\net9.0\refint\Agenda.CrossCutting.dll
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.CrossCutting\obj\Debug\net9.0\Agenda.CrossCutting.pdb
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.CrossCutting\obj\Debug\net9.0\ref\Agenda.CrossCutting.dll

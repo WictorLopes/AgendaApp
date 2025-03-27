@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\wicto\\OneDrive\\Documents\\AgendaApp\\Agenda Back\\Agenda.Domain\\Agenda.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\wicto\\OneDrive\\Documents\\AgendaApp\\agendaapp\\Agenda-back\\Agenda.Domain\\Agenda.Domain.csproj",
       "projectName": "Agenda.Domain",
-      "projectPath": "C:\\Users\\wicto\\OneDrive\\Documents\\AgendaApp\\Agenda Back\\Agenda.Domain\\Agenda.Domain.csproj",
+      "projectPath": "C:\\Users\\wicto\\OneDrive\\Documents\\AgendaApp\\agendaapp\\Agenda-back\\Agenda.Domain\\Agenda.Domain.csproj",
       "packagesPath": "C:\\Users\\wicto\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\wicto\\OneDrive\\Documents\\AgendaApp\\Agenda Back\\Agenda.Domain\\obj\\",
+      "outputPath": "C:\\Users\\wicto\\OneDrive\\Documents\\AgendaApp\\agendaapp\\Agenda-back\\Agenda.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\wicto\\AppData\\Roaming\\NuGet\\NuGet.Config"
