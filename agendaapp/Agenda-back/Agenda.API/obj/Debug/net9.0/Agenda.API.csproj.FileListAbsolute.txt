@@ -545,3 +545,9 @@ C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.API\obj
 C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.API\obj\Debug\net9.0\Agenda.API.pdb
 C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.API\obj\Debug\net9.0\Agenda.API.genruntimeconfig.cache
 C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.API\obj\Debug\net9.0\ref\Agenda.API.dll
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.API\bin\Debug\net9.0\publish\web.config
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.API\bin\Debug\net9.0\publish\Agenda.API.deps.json
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.API\bin\Debug\net9.0\publish\Agenda.API.runtimeconfig.json
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.API\bin\Debug\net9.0\publish\Agenda.API.staticwebassets.endpoints.json
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.API\bin\Debug\net9.0\publish\appsettings.Development.json
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.API\bin\Debug\net9.0\publish\appsettings.json

@@ -1,0 +1,3 @@
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\publish\Agenda.Domain.dll
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\publish\Agenda.Domain.deps.json
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\publish\Agenda.Domain.pdb

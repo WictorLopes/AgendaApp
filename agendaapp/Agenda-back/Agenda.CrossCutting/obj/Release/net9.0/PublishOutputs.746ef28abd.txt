@@ -1,0 +1,5 @@
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\publish\Agenda.CrossCutting.dll
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\publish\Agenda.CrossCutting.deps.json
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\publish\Agenda.CrossCutting.pdb
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\publish\Agenda.Domain.dll
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\publish\Agenda.Domain.pdb

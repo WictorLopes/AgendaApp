@@ -1,0 +1,12 @@
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.Domain\bin\Release\net9.0\Agenda.Domain.deps.json
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.Domain\bin\Release\net9.0\Agenda.Domain.dll
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.Domain\bin\Release\net9.0\Agenda.Domain.pdb
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.Domain\obj\Release\net9.0\Agenda.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.Domain\obj\Release\net9.0\Agenda.Domain.AssemblyInfoInputs.cache
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.Domain\obj\Release\net9.0\Agenda.Domain.AssemblyInfo.cs
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.Domain\obj\Release\net9.0\Agenda.Domain.csproj.CoreCompileInputs.cache
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.Domain\obj\Release\net9.0\Agenda.Domain.sourcelink.json
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.Domain\obj\Release\net9.0\Agenda.Domain.dll
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.Domain\obj\Release\net9.0\refint\Agenda.Domain.dll
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.Domain\obj\Release\net9.0\Agenda.Domain.pdb
+C:\Users\wicto\OneDrive\Documents\AgendaApp\agendaapp\Agenda-back\Agenda.Domain\obj\Release\net9.0\ref\Agenda.Domain.dll
