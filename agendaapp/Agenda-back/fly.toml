@@ -3,6 +3,8 @@
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
+# fly.toml app configuration file generated for agendaapp on 2025-03-27T22:03:09Z
+
 app = 'agendaapp'
 primary_region = 'gru'
 
@@ -13,7 +15,7 @@ primary_region = 'gru'
   force_https = true
   auto_stop_machines = 'stop'
   auto_start_machines = true
-  min_machines_running = 0
+  min_machines_running = 1
   processes = ['app']
 
 [[vm]]
@@ -21,3 +23,18 @@ primary_region = 'gru'
   cpu_kind = 'shared'
   cpus = 1
   memory_mb = 1024
+
+[auto_scaling]
+  min_machines = 1
+  max_machines = 3
+
+[services]
+  [[services.http]]
+  internal_port = 8080
+  force_https = true
+  [services.http.healthchecks]
+    interval = "10s"
+    grace_period = "30s"
+    max_consecutive_failures = 3
+    path = "/health"
+
