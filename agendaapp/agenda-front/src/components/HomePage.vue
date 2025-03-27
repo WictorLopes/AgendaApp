@@ -18,10 +18,21 @@
           <Column field="email" header="Email" />
           <Column field="telefone" header="Telefone" :body="formatarTelefone" />
           <Column field="tipoTelefone" header="Tipo" />
+          <Column header="Ações">
+            <template #body="slotProps">
+              <Button
+                icon="pi pi-times"
+                class="p-button-rounded p-button-danger p-button-text"
+                @click="deleteContato(slotProps.data, slotProps.index)"
+                v-tooltip="'Excluir contato'"
+              />
+            </template>
+          </Column>
         </DataTable>
       </template>
     </Card>
 
+    <!-- O restante do template permanece igual -->
     <Card class="form-card">
       <template #title>
         <h3>Adicionar Contato</h3>
@@ -113,8 +124,12 @@ import Column from 'primevue/column'
 import Dropdown from 'primevue/dropdown'
 import Card from 'primevue/card'
 import axios from 'axios'
+import Tooltip from 'primevue/tooltip'
 
 export default {
+  directives: {
+    'tooltip': Tooltip
+  },
   components: {
     Button,
     InputText,
@@ -165,7 +180,7 @@ export default {
     async fetchContatos() {
       this.loading = true
       try {
-        const response = await axios.get('http://localhost:5053/api/contato')
+        const response = await axios.get('https://agendaapp.fly.dev/api/contato')
         this.contatos = response.data
         this.contatos.forEach((contato) => {
           contato.telefone = this.formatarTelefone(
@@ -200,7 +215,7 @@ export default {
           telefone: this.newContato.telefone.replace(/\D/g, ''),
           tipoTelefone: this.newContato.tipoTelefone,
         }
-        await axios.post('http://localhost:5053/api/contato', contato)
+        await axios.post('https://agendaapp.fly.dev/api/contato', contato)
 
         contato.telefone = this.formatarTelefone(
           contato.telefone,
@@ -220,7 +235,16 @@ export default {
         this.submitting = false
       }
     },
-
+    async deleteContato(contato, index) {
+      if (confirm(`Deseja realmente excluir o contato ${contato.nome}?`)) {
+        try {
+          await axios.delete(`https://agendaapp.fly.dev/api/contato/${contato.id}`)
+          this.contatos.splice(index, 1)
+        } catch (error) {
+          alert('Erro ao excluir o contato. Tente novamente.')
+        }
+      }
+    },
     onTipoChange(event) {
       this.newContato.tipoTelefone = event.value
     },
@@ -321,6 +345,7 @@ export default {
 :deep(.p-datatable .p-datatable-tbody > tr:hover) {
   background-color: #f9f9f9;
 }
+
 .form-error {
   color: #d32f2f;
   text-align: center;
