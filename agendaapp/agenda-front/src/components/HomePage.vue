@@ -116,7 +116,7 @@
     <div class="status-alert" :class="{ 'is-active': !backendOnline }">
       <i class="pi pi-info-circle"></i>
       <span>
-        Sistema operando com o serviço gratuito do Fly.io.
+        Sistema operando com o serviço gratuito do Railway(https://railway.com).
       </span>
     </div>
   </div>

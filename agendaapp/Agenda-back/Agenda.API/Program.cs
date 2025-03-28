@@ -14,8 +14,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
+var databaseUrl = Environment.GetEnvironmentVariable("DATABASE_URL");
+
+if (string.IsNullOrEmpty(databaseUrl))
+{
+    throw new InvalidOperationException("A variável de ambiente DATABASE_URL não está definida.");
+}
+
 builder.Services.AddDbContext<AgendaDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(databaseUrl));
 
 builder.Services.AddScoped<IContatoRepository, ContatoRepository>();
 
