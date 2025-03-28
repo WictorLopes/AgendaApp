@@ -187,7 +187,7 @@ export default {
       this.loading = true
       try {
         const response = await axios.get(
-          'https://agendaapp.fly.dev/api/contato',
+          'https://agendaapp-production-d1ee.up.railway.app/api/contato',
         )
         this.contatos = response.data
         this.contatos.forEach((contato) => {
@@ -223,7 +223,7 @@ export default {
           telefone: this.newContato.telefone.replace(/\D/g, ''),
           tipoTelefone: this.newContato.tipoTelefone,
         }
-        await axios.post('https://agendaapp.fly.dev/api/contato', contato)
+        await axios.post('https://agendaapp-production-d1ee.up.railway.app/api/contato', contato)
 
         contato.telefone = this.formatarTelefone(
           contato.telefone,
@@ -247,7 +247,7 @@ export default {
       if (confirm(`Deseja realmente excluir o contato ${contato.nome}?`)) {
         try {
           await axios.delete(
-            `https://agendaapp.fly.dev/api/contato/${contato.id}`,
+            `https://agendaapp-production-d1ee.up.railway.app/api/contato/${contato.id}`,
           )
           this.contatos.splice(index, 1)
         } catch (error) {
