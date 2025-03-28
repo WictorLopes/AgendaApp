@@ -115,13 +115,8 @@
     </Card>
     <div class="status-alert" :class="{ 'is-active': !backendOnline }">
       <i class="pi pi-info-circle"></i>
-      <span v-if="!backendOnline">
-        Serviço temporariamente indisponível (estamos usando um plano gratuito).
-        Por favor, aguarde alguns minutos enquanto o sistema reinicia
-        automaticamente.
-      </span>
-      <span v-else>
-        Sistema operando normalmente (serviço gratuito do Fly.io)
+      <span>
+        Sistema operando com o serviço gratuito do Fly.io.
       </span>
     </div>
   </div>
@@ -167,16 +162,10 @@ export default {
       loading: false,
       submitting: false,
       formError: '',
-      backendOnline: true,
-      checkInterval: null,
     }
   },
   mounted() {
-    this.startHealthCheck()
     this.fetchContatos()
-  },
-  beforeUnmount() {
-    clearInterval(this.checkInterval)
   },
   methods: {
     getGreeting() {
@@ -268,18 +257,6 @@ export default {
     },
     onTipoChange(event) {
       this.newContato.tipoTelefone = event.value
-    },
-    async checkBackendHealth() {
-      try {
-        await axios.get('https://agendaapp.fly.dev/health')
-        this.backendOnline = true
-      } catch (error) {
-        this.backendOnline = false
-      }
-    },
-    startHealthCheck() {
-      this.checkBackendHealth()
-      this.checkInterval = setInterval(this.checkBackendHealth, 30000)
     },
   },
 }
