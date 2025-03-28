@@ -1,0 +1,22 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "agenda.API/**/*",
+        "use": "@vercel/dotnet",
+        "config": {
+          "project": "agenda.API/agenda.API.csproj"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/agenda.API/$1"
+      },
+      {
+        "src": "/",
+        "dest": "/agenda.API/healthcheck"
+      }
+    ]
+  }
