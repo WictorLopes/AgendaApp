@@ -11,30 +11,26 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-
 builder.Services.AddDbContext<AgendaDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-
 builder.Services.AddScoped<IContatoRepository, ContatoRepository>();
-
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
+// Configuração do CORS para permitir tanto o Vercel quanto o localhost
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowLocalhost8080", policy =>
+    options.AddPolicy("AllowVercelAndLocalhost", policy =>
     {
-        policy.WithOrigins("http://localhost:8080")
+        policy.WithOrigins("https://agenda-app-beige.vercel.app", "http://localhost:8080")
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
 });
 
 var app = builder.Build();
-
 
 if (app.Environment.IsDevelopment())
 {
@@ -45,7 +41,7 @@ if (app.Environment.IsDevelopment())
 app.UseRouting();
 
 
-app.UseCors("AllowLocalhost8080");
+app.UseCors("AllowVercelAndLocalhost");
 
 app.MapControllers();
 
