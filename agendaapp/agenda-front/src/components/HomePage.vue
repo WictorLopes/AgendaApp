@@ -2,7 +2,7 @@
   <div class="container">
     <h1 class="greeting">{{ saudacao }}</h1>
     <p class="user-info">
-      Usuário: 
+      Usuário:
       <span>{{ userName }}</span>
     </p>
 
@@ -113,6 +113,17 @@
         <span v-if="formError" class="form-error">{{ formError }}</span>
       </template>
     </Card>
+    <div class="status-alert" :class="{ 'is-active': !backendOnline }">
+      <i class="pi pi-info-circle"></i>
+      <span v-if="!backendOnline">
+        Serviço temporariamente indisponível (estamos usando um plano gratuito).
+        Por favor, aguarde alguns minutos enquanto o sistema reinicia
+        automaticamente.
+      </span>
+      <span v-else>
+        Sistema operando normalmente (serviço gratuito do Fly.io)
+      </span>
+    </div>
   </div>
 </template>
 
@@ -128,7 +139,7 @@ import Tooltip from 'primevue/tooltip'
 
 export default {
   directives: {
-    'tooltip': Tooltip
+    tooltip: Tooltip,
   },
   components: {
     Button,
@@ -156,10 +167,16 @@ export default {
       loading: false,
       submitting: false,
       formError: '',
+      backendOnline: true,
+      checkInterval: null,
     }
   },
   mounted() {
+    this.startHealthCheck()
     this.fetchContatos()
+  },
+  beforeUnmount() {
+    clearInterval(this.checkInterval)
   },
   methods: {
     getGreeting() {
@@ -180,7 +197,9 @@ export default {
     async fetchContatos() {
       this.loading = true
       try {
-        const response = await axios.get('https://agendaapp.fly.dev/api/contato')
+        const response = await axios.get(
+          'https://agendaapp.fly.dev/api/contato',
+        )
         this.contatos = response.data
         this.contatos.forEach((contato) => {
           contato.telefone = this.formatarTelefone(
@@ -238,7 +257,9 @@ export default {
     async deleteContato(contato, index) {
       if (confirm(`Deseja realmente excluir o contato ${contato.nome}?`)) {
         try {
-          await axios.delete(`https://agendaapp.fly.dev/api/contato/${contato.id}`)
+          await axios.delete(
+            `https://agendaapp.fly.dev/api/contato/${contato.id}`,
+          )
           this.contatos.splice(index, 1)
         } catch (error) {
           alert('Erro ao excluir o contato. Tente novamente.')
@@ -247,6 +268,18 @@ export default {
     },
     onTipoChange(event) {
       this.newContato.tipoTelefone = event.value
+    },
+    async checkBackendHealth() {
+      try {
+        await axios.get('https://agendaapp.fly.dev/health')
+        this.backendOnline = true
+      } catch (error) {
+        this.backendOnline = false
+      }
+    },
+    startHealthCheck() {
+      this.checkBackendHealth()
+      this.checkInterval = setInterval(this.checkBackendHealth, 30000)
     },
   },
 }
@@ -351,5 +384,26 @@ export default {
   text-align: center;
   font-size: 1rem;
   margin-top: -10px;
+}
+.status-alert {
+  margin-top: 40px;
+  padding: 12px;
+  border-radius: 4px;
+  background: #fff3e0;
+  color: #e65100;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.status-alert.is-active {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.status-alert i {
+  font-size: 1.2rem;
 }
 </style>

@@ -39,9 +39,10 @@ if (app.Environment.IsDevelopment())
 }
 
 
-app.UseCors("AllowVercelAndLocalhost");
 
 app.UseRouting();
+
+app.UseCors("AllowVercelAndLocalhost");
 
 app.MapControllers();
 

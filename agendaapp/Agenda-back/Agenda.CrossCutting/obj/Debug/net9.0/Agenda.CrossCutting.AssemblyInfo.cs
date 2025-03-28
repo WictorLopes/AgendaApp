@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Agenda.CrossCutting")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+49184c0669e0e64c5ad91788a34ddd1503740abc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+61c20bc2cd6ed451dd8d61c5a2420356eb38f400")]
 [assembly: System.Reflection.AssemblyProductAttribute("Agenda.CrossCutting")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Agenda.CrossCutting")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
