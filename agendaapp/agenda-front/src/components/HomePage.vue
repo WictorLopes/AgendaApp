@@ -230,6 +230,7 @@ export default {
           contato.tipoTelefone,
         )
         this.contatos.push(contato)
+        this.fetchContatos()
 
         this.newContato = {
           nome: '',
